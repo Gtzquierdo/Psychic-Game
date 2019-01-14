@@ -8,11 +8,8 @@ var guessChoices = [];
 document.onkeyup = function(event) {
 
 	var userGuess = event.key;
-
 	var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
 	var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
-
 
 	if (options.indexOf(userGuess) > -1) {
 
@@ -32,8 +29,6 @@ document.onkeyup = function(event) {
 		numGuesses = 9;
 		losses ++;
 		guessChoices = [];
-
-		
 	}
 
 	var html = 
@@ -42,7 +37,7 @@ document.onkeyup = function(event) {
 		"<p>Victories: " + wins + "</p>" +
 		"<p>Losses: " + losses + "</p>" +
 		"<p>Guesses left until you lose: " + numGuesses + "</p>" +
-		"<p>Your most likely wrong Guesses so far: " + guessChoices.join(", ") + "</p>";
+		"<p>These letter don't work: " + guessChoices.join(", ") + "</p>";
 
 	document.querySelector("#game").innerHTML = html;
 
